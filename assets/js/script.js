@@ -75,3 +75,12 @@ function colors() {
         console.log (timeArray[i].attr("data-time"))
     }
 }
+
+// Button for clear the day
+$("#clearDay").on("click", function(){
+    localStorage.clear();
+    loadCalendar()
+  }) 
+
+loadCalendar();
+auditCalendar();
