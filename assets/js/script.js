@@ -21,3 +21,22 @@ var loadCalendar = function () {
     $("#6pm .timestampdescription").val(localStorage.getItem("6pm"));
   };
   
+var auditCalendar = function () {
+//for the currenttime variable
+var currentTime = moment().hours();
+
+//Add a color block that compare the calendar time to the current time which will change if the time is either in present, future or past time
+$(".time-stamp").each(function () {
+    var calendarTime = parseInt($(this).attr("id"));
+
+    if (calendarTime < currentTime) {
+    $(this).addClass("past");
+    } else if (calendarTime > currentTime) {
+    $(this).addClass("future");
+    } else {
+    $(this).addClass("present");
+    }
+});
+};
+  
+  
