@@ -50,3 +50,28 @@ var three =$('#3p')
 var four =$('#4p')
 var five =$('#5p')
 var six =$('#6p')
+
+var timeArray = [nine, ten, eleven, twelve, one, two, three, four, five, six]
+
+//create a set interval that runs a function every hour
+/*the function will target the timestampanddescription class and be a .each method that it runs will compare the current hour using moment
+to the value of the id assigned
+create a switch case or a if else statement to apply classes with the 
+correct coloring to them
+*/
+function colors() {
+    for (let i=0; i < timeArray.length; i++) {
+       
+        if (currentTime > timeArray[i].attr("data-time")){
+            timeArray[i].attr("class", "past col-md-10 timestampdescription text");
+
+        } else if (currentTime == timeArray[i].attr("data-time")) {
+            timeArray[i].attr("class", "present col-md-10 timestampdescription text");
+
+        } else {
+
+            timeArray[i].attr("class", "future col-md-10 timestampdescription text");
+        }
+        console.log (timeArray[i].attr("data-time"))
+    }
+}
