@@ -39,4 +39,14 @@ $(".time-stamp").each(function () {
 });
 };
   
-  
+//array variables that links time id in html that define every hour
+var nine =$('#9a')
+var ten =$('#10a')
+var eleven =$('#11a')
+var twelve =$('#12p')
+var one =$('#1p')
+var two =$('#2p')
+var three =$('#3p')
+var four =$('#4p')
+var five =$('#5p')
+var six =$('#6p')
